@@ -1,0 +1,314 @@
+body {
+    margin: 0; /* Elimina el margen predeterminado alrededor del cuerpo del documento */
+    font-family: 'Roboto', sans-serif; /* Establece la fuente para todo el texto en la página */
+    line-height: 1.6; /* Define la altura de línea para el texto, mejorando la legibilidad */
+    background-color: #f5f7fa; /* Establece un color de fondo suave para la página */
+    color: #333; /* Define un color de texto general que es más suave que el negro puro */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: rgb(32, 93, 203); /* Aplica un color de fondo azul al encabezado */
+    color: white; /* Establece el color del texto en blanco dentro del encabezado */
+    padding: 15px 20px; /* Añade espacio interno (padding) alrededor del contenido del encabezado */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil debajo del encabezado para dar un efecto de profundidad */
+    display: flex; /* Usa Flexbox para organizar los elementos hijos en una fila */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos hijos, empujándolos a los extremos */
+    align-items: center; /* Alinea verticalmente los elementos en el centro del contenedor */
+}
+
+#superior {
+    font-size: 1.5rem; /* Establece un tamaño de fuente grande para el título */
+    font-weight: bold; /* Aplica un estilo de texto en negrita */
+    margin-left: 10px; /* Añade un pequeño margen a la izquierda del título */
+    display: flex; /* Usa Flexbox para permitir una alineación más precisa dentro de este elemento */
+    align-items: center; /* Alinea el contenido del título verticalmente en el centro */
+}
+
+/* Contenedor para el logo y el título */
+.logo-titulo {
+    display: flex; /* Usa Flexbox para organizar el logo y el título en una fila */
+    align-items: center; /* Alinea verticalmente el logo y el título al centro */
+}
+
+#icono1 {
+    max-width: 50px; /* Limita el ancho máximo del logo a 50px */
+    border-radius: 50%; /* Hace que el logo sea circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil alrededor del logo */
+}
+
+/* Estilos del contenedor del menú */
+.navbar {
+    background-color: transparent; /* Hace que el fondo del menú sea transparente */
+}
+
+.navbar ul {
+    list-style-type: none; /* Elimina los puntos de lista predeterminados de los elementos de la lista */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 0; /* Elimina cualquier padding predeterminado */
+    display: flex; /* Usa Flexbox para organizar los elementos de la lista en una fila */
+    justify-content: flex-end; /* Alinea los elementos del menú hacia la derecha */
+}
+
+.navbar ul li a {
+    display: block; /* Hace que cada enlace ocupe todo el espacio disponible dentro del elemento de la lista */
+    color: white; /* Establece el color del texto de los enlaces en blanco */
+    text-align: center; /* Centra el texto dentro de cada enlace */
+    padding: 14px 20px; /* Añade espacio interno (padding) alrededor del texto de los enlaces */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Añade una transición suave al cambiar el color de fondo o la transformación */
+}
+
+.navbar ul li a:hover {
+    background-color: white; /* Cambia el color de fondo cuando el cursor pasa sobre el enlace */
+    transform: scale(1.1); /* Agranda ligeramente el enlace cuando se pasa el cursor sobre él */
+    border-radius: 4px; /* Redondea ligeramente las esquinas del enlace */
+    color: black;
+}
+
+.navbar ul li a.active {
+    background-color: #04AA6D; /* Cambia el color de fondo del enlace activo o seleccionado */
+    border-radius: 4px; /* Redondea ligeramente las esquinas del enlace activo */
+}
+.dropbtn {
+    background-color:  rgb(32, 93, 203);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+   
+  }
+  
+  .dropup {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+  }
+  
+  .dropup-content {
+    display: none;
+    position: absolute;
+    background-color:  rgb(32, 93, 203);
+    min-width: 160px;
+    
+  }
+  
+  .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropup-content a:hover {background-color: #ccc}
+  
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+  
+  .dropup:hover .dropbtn {
+    background-color: #2980B9;
+  }
+
+@media screen and (max-width: 600px) {
+    .navbar ul {
+        flex-direction: column; /* Cambia la disposición de la barra de navegación a columna */
+        width: 100%;
+    }
+
+    .navbar ul li {
+        width: 100%; /* Asegura que cada elemento del menú ocupe todo el ancho disponible */
+    }
+
+    .navbar ul li a {
+        text-align: left; /* Alinea el texto a la izquierda para una mejor presentación en pantallas pequeñas */
+        padding: 10px; /* Ajusta el padding para mejorar la usabilidad en dispositivos móviles */
+    }
+
+    .submenu {
+        position: static; /* Hace que el submenú siga el flujo del documento */
+        width: 100%; /* Asegura que el submenú ocupe todo el ancho disponible */
+        margin-left: 10px; /* Añade un margen izquierdo al submenú para diferenciarlo del elemento principal */
+    }
+}
+
+
+
+/* Estilos para pantallas pequeñas (Responsive) */
+@media screen and (max-width: 600px) { /* Aplica estos estilos solo cuando la pantalla tiene un ancho máximo de 600px */
+    header {
+        flex-direction: column; /* Cambia la dirección de los elementos dentro del encabezado a una columna (uno debajo del otro) */
+        align-items: flex-start; /* Alinea los elementos del encabezado a la izquierda */
+    }
+
+    .navbar ul {
+        justify-content: flex-start; /* Alinea los elementos del menú a la izquierda */
+        width: 100%; /* Hace que el menú ocupe todo el ancho disponible */
+    }
+
+    .navbar ul li {
+        width: 100%; /* Hace que cada elemento de la lista ocupe todo el ancho del menú */
+    }
+
+    .navbar ul li a {
+        text-align: left; /* Alinea el texto de los enlaces a la izquierda */
+        padding: 10px; /* Reduce el padding interno alrededor de los enlaces */
+    }
+}
+
+/* Sección nosotros */
+.nosotros {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.nosotros img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir el área */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    max-width: 80%;
+}
+
+
+
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Estilo del contenedor de contacto */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px;
+    flex-wrap: wrap;
+}
+
+/* Sección de formulario */
+.form-section {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Sección de información de empresa */
+.info-section {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.company-info {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.company-info h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.company-info p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.company-info i {
+    margin-right: 10px;
+    color: #333;
+}
+
+/* Estilo del mapa */
+.map-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}

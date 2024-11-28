@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - Empresa de Software</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <header>
+        <div class="logo-titulo">
+            <img id="icono1" src="imagenes/download.png" alt="Soluciones">
+            <h1 id="superior">SALOGITECH</h1>
+        </div>
+        <nav class="navbar">
+            <ul class="menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="dropup">
+                    <button class="dropbtn">Nosotros</button>
+                    <div class="dropup-content">
+                        <a href="mision.html">Misión</a>
+                        <a href="vision.html">Visión</a>
+                        <a href="principios.html">Principios</a>
+                    </div>
+                </li>
+                <li><a href="/servicios.html">Servicios</a></li>
+                <li><a href="/contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="nosotros">
+        <div class="overlay">
+            <h2>Sobre Nosotros</h2>
+            <p>Somos una empresa líder en el desarrollo de soluciones tecnológicas innovadoras. Nuestro equipo está dedicado a transformar ideas en realidades digitales.</p>
+        </div>
+        <img src="https://dinahosting.com/blog/upload/2019/08/programaci%C3%B3n-mitos.jpg" alt="Nosotros">
+    </section>
+
+    <div class="contact-container">
+        <!-- Formulario de Contacto -->
+        <div class="form-section">
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="status"></div> <!-- Mostrar estado del envío -->
+        </div>
+
+        <!-- Información de Empresa y Mapa -->
+        <div class="info-section">
+            <div class="company-info">
+                <h2>Información de Contacto</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Dirección: Calle 123, Pasto, Colombia</p>
+                <p><i class="fas fa-phone-alt"></i> Teléfono: +57 2 123 4567</p>
+                <p><i class="fas fa-envelope"></i> Email: contacto@salogitech.com</p>
+                <p><i class="fas fa-clock"></i> Horarios: Lunes a Viernes, 9:00 AM - 6:00 PM</p>
+            </div>
+            <div class="map-container">
+                <!-- Mapa de Google Maps centrado en Pasto, Colombia -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7952.671155329338!2d-77.28111!3d1.21361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2999883a4885b1%3A0xf6319c270e76f18e!2sPasto%2C%20Nari%C3%B1o%2C%20Colombia!5e0!3m2!1ses-419!2ses!4v1694701050001!5m2!1ses-419!2ses" 
+                    width="100%" 
+                    height="250" 
+                    frameborder="0" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SALOGITECH - Todos los derechos reservados.</p>
+    </footer>
+
+
+</body>
+</html>
